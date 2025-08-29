@@ -53,3 +53,24 @@ git clone https://github.com/<your-username>/<your-repo>.git
 cd Bajaj
 npm install
 npm run dev  (install nodemon )
+
+☁️ Deployment (Vercel)
+npm install -g vercel
+
+2️⃣ Create vercel.json
+
+At project root:
+
+{
+  "version": 2,
+  "builds": [
+    { "src": "src/index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "src/index.js" }
+  ]
+}
+
+3️⃣ Deploy
+    
+    vercel
