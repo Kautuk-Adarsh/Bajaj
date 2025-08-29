@@ -24,6 +24,7 @@ It exposes a **POST /bfhl** API that accepts an array of strings and returns:
 
 ## 📂 Project Structure
 
+```
 Bajaj/
 │── node_modules/
 │── src/
@@ -42,6 +43,7 @@ Bajaj/
 │── .gitignore
 │── README.md
 
+```
 
 ---
 
