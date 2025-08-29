@@ -1,9 +1,11 @@
 const express = require("express");
-const app = express();
 const bfhlRoute = require("./routes/bfhl");
+const serverless = require("serverless-http");
 
-app.use(express.json());   // parse JSON body
-app.use("/", bfhlRoute);   // register routes
+const app = express();
+app.use(express.json());
+app.use("/", bfhlRoute);
 
-// Export the app instead of listening (Vercel handles this)
+
 module.exports = app;
+module.exports.handler = serverless(app);
